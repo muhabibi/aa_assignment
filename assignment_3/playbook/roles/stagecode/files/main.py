@@ -30,9 +30,13 @@ def parseJson():
 def writefile(res):
     unique = { repr(each): each for each in res }.values()
     
-    with open('final_result_event.json', 'w', encoding='utf-8') as f:
-        for d in unique:
-            f.write(d + '\n')
+    try:
+        with open('final_result_event.json', 'w', encoding='utf-8') as f:
+            for d in unique:
+                f.write(d + '\n')
+        print('final_result_event.json has been created')
+    except IOError as e:
+        print(e)
     
 def main():
     res = parseJson()
