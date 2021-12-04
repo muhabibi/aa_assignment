@@ -1,0 +1,20 @@
+Assignemnt 1
+'''
+QUESTION:
+  Given an example of data input from streaming side like link given :
+  https://gitlab.com/im-batman/simple-data-assestment/-/raw/main/superman.json
+
+  Write a code to produce an expected json format as similar as below :
+  https://gitlab.com/im-batman/simple-data-assestment/-/raw/main/final_result.json
+
+USE CASE:
+  - Result should be unique for each event
+  - Result should successfully converted any special character to UTF-8 encoding
+  - Result should successfully converted any nested array to flat dictionary format 
+
+APPROXIMATE TIME TAKEN: 
+  - 3 HOUR
+
+'''
+
+

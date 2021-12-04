@@ -1,0 +1,12 @@
+'''
+QUESTION:
+  From solution you've made in assestment1.. assume that the source comes from a streaming topic,
+   kindly please develop a yaml file that will treat your solution as serverless service that include a error logging solution.
+  It can be a pod, deploymentment, replication controller, terraform, ansible playbook or plain container.
+  Justify your solution
+
+APPROXIMATE TIME TAKEN: 
+
+T  - 2 HOUR
+
+'''

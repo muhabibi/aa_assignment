@@ -1,0 +1,43 @@
+
+'''
+QUESTION:
+  Given an API that contain data as below :
+  https://randomuser.me/api/0.8/?results=1000
+
+  Write a spark code to produce an output like below :
+  https://gitlab.com/im-batman/myassestment/-/tree/master/assestment_2nd_total_cnt    ## Single CSV file contain total count
+  https://gitlab.com/im-batman/myassestment/-/tree/master/assestment_2nd_pqt          ## Parquet file partition by gender and state
+
+  Example output of parquet file are like below
+  +--------------------+------+------------+----------+------+--------------+----------+----------------+----------+-------------------+
+  |               email|gender|        city|     state|  last|         phone|registered|        username|       dob|       current_time|
+  +--------------------+------+------------+----------+------+--------------+----------+----------------+----------+-------------------+
+  |piper.wang@exampl...|female|  lower hutt| southland|  wang|(609)-250-9520|1258039450|organicrabbit927| 200099271|2021-03-11 11:14:39|
+  |mackenzie.chen@ex...|female|    auckland|  gisborne|  chen|(408)-993-1967| 957372389|      bluecat416| 434114864|2021-03-11 11:14:39|
+  |willow.taylor@exa...|female|new plymouth|wellington|taylor|(678)-224-6132|1027132841|    whiteswan853| 715792352|2021-03-11 11:14:39|
+  |hannah.davies@exa...|female|    gisborne| northland|davies|(584)-411-3519| 915793891|ticklishkoala505| 632753972|2021-03-11 11:14:39|
+  |jackson.wright@ex...|  male|  wellington|  gisborne|wright|(138)-814-9811|1389882539|     tinyfish981|1004565351|2021-03-11 11:14:39|
+  +--------------------+------+------------+----------+------+--------------+----------+----------------+----------+-------------------+
+
+USE CASE:
+  - Get total count of user group by gender and email_provider and save as CSV file
+  - Produce list of data like example above and save it as parquet file partition by gender and state
+  - current_time column are base on MYT time
+  - parquet file are base on single thread
+
+HINT:
+  - You can follow below step to setup Spark in the environment:
+      Click on Shell tab, execute below command
+          wget https://downloads.apache.org/spark/spark-3.0.2/spark-3.0.2-bin-hadoop2.7.tgz && tar -zxf spark-3.0.2-bin-hadoop2.7.tgz         
+          export SPARK_LOCAL_IP=127.0.0.1
+          export SPARK_MAJOR_VERSION=3
+          export SPARK_HOME=/home/runner/myAssestment/spark-3.0.2-bin-hadoop2.7
+          export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+          export PYTHONPATH=$SPARK_HOME/python
+          export PYSPARK_PYTHON=python3
+          export PATH=$JAVA_HOME/bin:/usr/local/bin:$SPARK_HOME/bin:$PATH:~/.local/bin:$PATH
+          pyspark --version   
+
+export JAVA_HOME="$(/usr/libexec/java_home)"
+
+'''
